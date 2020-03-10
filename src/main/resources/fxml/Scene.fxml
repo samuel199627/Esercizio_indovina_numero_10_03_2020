@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.indovinaNumero.FXMLController">
+   <top>
+      <Label text="INDOVINA NUMERO" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <VBox>
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="Tentativi Rimasti">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="txtRimasti" editable="false">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="newBtn" mnemonicParsing="false" onAction="#doNuova" text="Nuova Partita">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="layoutTentativo" disable="true">
+                     <children>
+                        <TextField fx:id="txtProva">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="tryBtn" mnemonicParsing="false" onAction="#doTentativo" text="Prova">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <TextArea fx:id="txtRis" editable="false" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
